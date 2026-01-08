@@ -1,0 +1,33 @@
+---
+title: DO PEOPLE EVEN RIOT?            #- Hay que cambiarlo
+image: imagenes/foto2.jpeg      #- poned una foto vuestra
+about:
+  template: trestles        #- {jolla, solana, ...}
+  image-width: 16em         #- https://cybmeta.com/em-y-rem
+  image-shape: rounded    #- {rectangle, round, rounded}
+  links:
+    - icon: envelope
+      text: e-mail
+      url: "contact:gabagaleano@gmail.com"            #- pon tu e-mail
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/gabagaleano/     #- linkedin
+    - icon: github
+      text: Github
+      href: https://github.com/gabagaleano         #- Github
+include-in-header:
+  - text: |
+     <link rel = "shortcut icon" href = "imagenes/uv.jpg" />
+#- embeed the source document 
+code-tools: false
+---
+
+Hola, soy Gabriela Galeano
+
+Esta web sirve para presentar el trabajo final individual para la asignatura "Programación y manejo de datos en la era Del Big Data", optativa de GECO en la Facultad de Economía de la Universitat de València.
+
+La web de la asignatura está [aquí](https://perezp44.github.io/intro-ds-25-26-web/){target="_blank"} y los trabajos de mis compañeros de curso puedes verlos [aquí](https://perezp44.github.io/intro-ds-25-26-web/05-trabajos-estudiantes.html){target="_blank"}.
+
+Mi trabajo lleva por título : "DO PEOPLE EVEN RIOT?". Donde exploro la violencia policiaca vivida por protestantes a través del mundo. La finalidad es crear conciencia de la realidad vivida, tomando especial enfoque en casos con gobiernos autoritativos como lo son Venezuela y Hong Kong (China).
+
+El trabajo puede verse [aquí](my_trabajo_BigData.html).

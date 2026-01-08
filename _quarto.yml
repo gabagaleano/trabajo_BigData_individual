@@ -1,0 +1,170 @@
+#- este PRIMER bloque mejor no tocarlo -----------------------------------------
+#- este PRIMER bloque mejor no tocarlo -----------------------------------------
+#- (salvo la última linea)
+project:   
+  title: "trabajo_BigData_individual"
+  type: website          
+  output-dir: docs       
+  preview:
+    port: 4445
+    browser: true
+    watch-inputs: true
+    navigate: true
+     
+#- hace el rendered documento (.html) autocontenido  
+# embed-resources: true  
+
+#- agrandar imágenes: https://quarto.org/docs/output-formats/html-lightbox-figures.html
+lightbox: true
+
+
+
+#- anchor sections (links en las secciones del rendered document)
+anchor-sections: true
+
+#- otros enlaces (que aparecerán debajo del TOC)
+other-links:
+  - text: Web del curso
+    href: https://perezp44.github.io/intro-ds-25-26-web/
+  - text: Trabajos de mis compañeros
+    href: https://perezp44.github.io/intro-ds-25-26-web/05-trabajos-estudiantes.html 
+  - text: Repo del trabajo
+    #- has de cambiar "perezp44" por tu usuario de Github. AQUI!!!!!!
+    href: https://github.com/gabagaleano/trabajo_BigData_individual     #- AQUI!!!!
+    
+
+#- este SEGUNDO bloque puedes tocarlo pero no hace falta -----------------------
+#- este SEGUNDO bloque puedes tocarlo pero no hace falta -----------------------
+
+
+#- opciones para el índice (TOC)
+toc: true
+toc-depth: 3
+toc-location: right    
+toc-title: "Your Whereabouts"   #---
+
+#- hace que los links se abren en pestañas nuevas
+link-external-newwindow: true 
+
+#- Cross-references
+crossref:
+  fig-title: Figure  # (default is "Figure")
+  tbl-title: Table    # (default is "Table")
+  #title-delim: —     # (default is ":")
+
+#- Posicion de los fig-captions
+fig-cap-location: bottom
+
+#- opciones para las imágenes hechas con código   
+#fig-height: 5
+#fig-width: 5
+fig-format: png
+fig-dpi: 300
+
+
+#- opciones para los chunks de código --
+#- https://quarto.org/docs/output-formats/html-code.html
+code-copy: true
+code-overflow: wrap   #- {wrap, scroll}
+code-fold: true
+code-line-numbers: true
+
+#- embeed the source document 
+code-tools: true
+code-link: true
+
+#- Default knitr options
+knitr:
+  opts_chunk: 
+    collapse: true
+    comment: "#>" 
+    fig.asp:  7/9
+    out.width: "95%"
+    fig.align: "center"
+    fig.show: "hold"
+    R.options:
+      options(scipen = 999) #- para quitar la notación científica  
+
+#- el output de los chunks del .qmd van a los panes
+editor_options: 
+  chunk_output_type: console
+
+#- licencia: https://quarto.org/docs/reference/formats/html.html#metadata
+license: CC BY
+
+
+# Default execute options
+execute:
+  echo: true
+  eval: true
+  message: false
+  warning: false
+  #fig-align: center
+  #freeze: true  #- des-comentar cuando estéis tuneando el blog   (AQUI!!!!!)
+                 #- https://quarto.org/docs/projects/code-execution.html#freeze
+
+
+
+
+#- ESTRUCTURA/layout de la página WEB -------   
+#- de este TERCER bloque HAS de CAMBIAR algunas cosas --------------------------
+#- de este TERCER bloque HAS de CAMBIAR algunas cosas --------------------------
+
+#- tienes que cambiar algunas cosas ---
+website:
+  title: "DO PEOPLE EVEN RIOT?"            #- hay q cambiarlo  AQUI!!!!
+  search:   
+    location: navbar
+    type: overlay   
+    copy-button: true
+  navbar:
+    pinned: true
+    logo: "imagenes/uv.jpeg"   #---
+    background: "#063336"    #- color de la navbar
+    foreground: "#548E8B"    #- color navigation elements, text and links that appear in the navbar.
+    left: 
+      - icon: vector-pen
+        href: index.html
+    right:
+      - text: "Main"        #--- s
+        href: my_trabajo_BigData.qmd  
+      - text: "Venezuela"        #--- s
+        href: trabajo_BigData_vnzl.qmd 
+      - text: "China & Hong Kong"        #--- s
+        href: trabajo_BigData_china.qmd  
+      - icon: github
+        href: https://github.com/gabagaleano    #- pon tu usuario Github AQUI!!!!
+      - icon: envelope
+        url: "contact:gabagaleano@gmail.com"            #- pon tu e-mail AQUI!!!!
+  page-footer:
+    border: true
+    background: "#f27f60"         #-- AQUI!!!!
+    left: "© 2026 G.G.G."   #-- AQUI!!!!
+    center: "Hecho con [Quarto](https://quarto.org)"
+    right:
+      - icon: github
+        href: https://github.com/gabagaleano     #- pon tu usuario Github AQUI!!!!
+      - icon: envelope
+        url: "contact:gabagaleano@gmail.com"            #- pon tu e-mail AQUI!!!!
+    
+    
+
+#- FORMATO -------   
+#- de este CUARTO bloque HAS de CAMBIAR algunas cosas --------------------------
+#- de este CUARTO bloque HAS de CAMBIAR algunas cosas --------------------------
+
+format:
+  html:
+    page-layout: full
+    theme: 
+      - journal #- {cerulean, cosmo, cyborg, darkly, flatly, journal, litera, lumen, lux, materia, minty, pulse, sandstone, simplex, sketchy, slate, solar, spacelab, superhero, united, yeti}
+    css: 
+      - assets/styles.css
+    mainfont: sans-serif
+    highlight-style: a11y   #-
+
+   
+
+#- opciones de lenguaje
+lang: en  #- castellano {es, en}    https://quarto.org/docs/authoring/language.html
+language: assets/_my_language-es.yml  #- por si quieres usar tus propios "términos" en castellano
